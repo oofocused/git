@@ -1,7 +1,6 @@
 Git 的命令行接口
 
-为了避免重复信息，我们将不会详细解释以下命令行。强烈推荐您阅读 Pro Git 中文版 或可以观看本讲座的视频来学习。
-基础
+为了避免重复信息，我们将不会详细解释以下命令行。强烈推荐您阅读 Pro Git 中文版
 
     git help <command>: 获取 git 命令的帮助信息
     git init: 创建一个新的 git 仓库，其数据会存放在一个名为 .git 的目录下
@@ -57,15 +56,14 @@ Git 高级操作
 
 
 配置ssh-key过程
+
+
 第1步：查看 或者 生成一个SSH-Key
 
 // 新环境大概率会报错 ，因为这个目录不存在
 $ cd ~/.ssh
-
 使用下面命令生成ssh-key
-
 ssh-keygen -t rsa -C "xxx@xxx.com"  // 将 "xxx@xxx.com" 替换为你自己GitHub的邮箱地址
-
 然后一直按 “enter”键
 
 
@@ -79,16 +77,13 @@ $ cat id_rsa.pub
 
 第3步：GitHub设置中添加公钥
 
-点击GitHub中设置标签
-
-，然后点击 SSH and GPG keys 、 New SSH key 将复制好的链接粘贴进去
+点击GitHub中设置标签，然后点击 SSH and GPG keys 、 New SSH key 将复制好的链接粘贴进去
 
 
 第4步：检查是否设置成功
 
 $ ssh -T git@github.com
-
-看到successfully字样就成
+看到successfully字样就成功
 
 
 第5步：GitHub中创建仓库，并使用ssh链接进行下拉
